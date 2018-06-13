@@ -17,10 +17,28 @@
                     <view key="view" contentMode="scaleToFill" id="4f5-eI-bKh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vpD-KQ-Hmp">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Fdt-uF-OiN" id="A9q-NS-G5l"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="vpD-KQ-Hmp" secondAttribute="trailing" id="0EY-fm-ZL4"/>
+                            <constraint firstItem="UID-Od-JRo" firstAttribute="bottom" secondItem="vpD-KQ-Hmp" secondAttribute="bottom" id="JwL-Jv-JBz"/>
+                            <constraint firstItem="vpD-KQ-Hmp" firstAttribute="top" secondItem="UID-Od-JRo" secondAttribute="top" id="anm-1F-fqh"/>
+                            <constraint firstItem="vpD-KQ-Hmp" firstAttribute="leading" secondItem="UID-Od-JRo" secondAttribute="leading" id="hHQ-Is-wRd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="UID-Od-JRo"/>
                     </view>
                     <navigationItem key="navigationItem" id="P6L-99-eql"/>
+                    <connections>
+                        <outlet property="tableView" destination="vpD-KQ-Hmp" id="Jed-uX-lMm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HGv-Ja-1gW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
