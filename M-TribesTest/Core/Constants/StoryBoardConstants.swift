@@ -8,8 +8,14 @@
 
 import Foundation
 
-struct Location {
+struct LocationSB {
     
     static let  name = "Location"
+    
+}
+
+struct RootSB {
+    
+    static let  name = "Root"
     
 }

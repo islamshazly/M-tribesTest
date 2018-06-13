@@ -36,7 +36,7 @@ final class PlacemarkView: UIView {
     
     func initSubViews(withFrame frame : CGRect) {
         
-        let nib = UINib(nibName: "LocationView", bundle: nil)
+        let nib = UINib(nibName: "PlacemarkView", bundle: nil)
         nib.instantiate(withOwner: self, options: nil)
         view.frame = frame
         addSubview(view)
@@ -45,7 +45,7 @@ final class PlacemarkView: UIView {
     
     func initSubViews () {
         
-        let nib = UINib(nibName: "LocationView", bundle: nil)
+        let nib = UINib(nibName: "PlacemarkView", bundle: nil)
         nib.instantiate(withOwner: self, options: nil)
         view.frame = bounds
         addSubview(view)

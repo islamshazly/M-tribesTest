@@ -48,6 +48,8 @@ final class NetworkManager: NSObject {
         if let data = response.result.value {
           let model : BaseModel = Mapper<T>().map(JSONObject: data, toObject: objectClass!)
           success!(model)
+            print("Request Paramters: \(String(describing: model.toJSON()))")
+
             if LastRequest.request.lastRequests.count > 0 {
                 if let requestIndex = LastRequest.request.lastRequests.index(of: requestConfiguration) {
 

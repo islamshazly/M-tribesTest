@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		55D1053AD400B6EEAE586290 /* Pods_M_TribesTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F0A81B31D85236991BE212 /* Pods_M_TribesTest.framework */; };
+		9B8997D820D101990055DFB9 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B8997D720D101990055DFB9 /* Root.storyboard */; };
+		9B8997DA20D102A20055DFB9 /* RootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8997D920D102A20055DFB9 /* RootVC.swift */; };
+		9B8997E020D10BEA0055DFB9 /* PlacemarkView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B8997DF20D10BEA0055DFB9 /* PlacemarkView.xib */; };
+		9B8997E220D10C310055DFB9 /* PlacemarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8997E120D10C310055DFB9 /* PlacemarkView.swift */; };
+		9B8997E820D111FF0055DFB9 /* PlacemarksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8997E620D111FF0055DFB9 /* PlacemarksCell.swift */; };
+		9B8997EB20D114030055DFB9 /* PlacemarksCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B8997EA20D114030055DFB9 /* PlacemarksCell.xib */; };
 		9BEC89C420D0455E0054E1CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEC89C320D0455E0054E1CF /* AppDelegate.swift */; };
 		9BEC89C620D0455E0054E1CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEC89C520D0455E0054E1CF /* ViewController.swift */; };
 		9BEC89C920D0455E0054E1CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BEC89C720D0455E0054E1CF /* Main.storyboard */; };
@@ -41,6 +47,12 @@
 		24F0A81B31D85236991BE212 /* Pods_M_TribesTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_M_TribesTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D10BE49393DF8984E5A044D /* Pods-M-TribesTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-M-TribesTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-M-TribesTest/Pods-M-TribesTest.release.xcconfig"; sourceTree = "<group>"; };
 		7CFF4B7635487AEF0D4AC045 /* Pods-M-TribesTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-M-TribesTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-M-TribesTest/Pods-M-TribesTest.debug.xcconfig"; sourceTree = "<group>"; };
+		9B8997D720D101990055DFB9 /* Root.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
+		9B8997D920D102A20055DFB9 /* RootVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootVC.swift; sourceTree = "<group>"; };
+		9B8997DF20D10BEA0055DFB9 /* PlacemarkView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlacemarkView.xib; sourceTree = "<group>"; };
+		9B8997E120D10C310055DFB9 /* PlacemarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacemarkView.swift; sourceTree = "<group>"; };
+		9B8997E620D111FF0055DFB9 /* PlacemarksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacemarksCell.swift; sourceTree = "<group>"; };
+		9B8997EA20D114030055DFB9 /* PlacemarksCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlacemarksCell.xib; sourceTree = "<group>"; };
 		9BEC89C020D0455E0054E1CF /* M-TribesTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "M-TribesTest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BEC89C320D0455E0054E1CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BEC89C520D0455E0054E1CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +113,108 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9B8997D420D101690055DFB9 /* root */ = {
+			isa = PBXGroup;
+			children = (
+				9B8997D620D101820055DFB9 /* view */,
+				9B8997D520D101750055DFB9 /* controller */,
+			);
+			path = root;
+			sourceTree = "<group>";
+		};
+		9B8997D520D101750055DFB9 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				9B8997D920D102A20055DFB9 /* RootVC.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		9B8997D620D101820055DFB9 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				9B8997D720D101990055DFB9 /* Root.storyboard */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		9B8997DB20D10B330055DFB9 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				9B8997E120D10C310055DFB9 /* PlacemarkView.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		9B8997DC20D10B3F0055DFB9 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				9B8997DF20D10BEA0055DFB9 /* PlacemarkView.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		9B8997DD20D10B470055DFB9 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		9B8997DE20D10BA30055DFB9 /* PlacemarkView */ = {
+			isa = PBXGroup;
+			children = (
+				9B8997DD20D10B470055DFB9 /* model */,
+				9B8997DC20D10B3F0055DFB9 /* view */,
+				9B8997DB20D10B330055DFB9 /* controller */,
+			);
+			path = PlacemarkView;
+			sourceTree = "<group>";
+		};
+		9B8997E320D1116E0055DFB9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9B8997E420D1117B0055DFB9 /* PlacemarkCell */,
+			);
+			name = Cell;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		9B8997E420D1117B0055DFB9 /* PlacemarkCell */ = {
+			isa = PBXGroup;
+			children = (
+				9B8997EC20D11C090055DFB9 /* view */,
+				9B8997E520D1118A0055DFB9 /* Controller */,
+			);
+			path = PlacemarkCell;
+			sourceTree = "<group>";
+		};
+		9B8997E520D1118A0055DFB9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9B8997E620D111FF0055DFB9 /* PlacemarksCell.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9B8997EC20D11C090055DFB9 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				9B8997EA20D114030055DFB9 /* PlacemarksCell.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		9B8997ED20D11C290055DFB9 /* PlaceMark */ = {
+			isa = PBXGroup;
+			children = (
+				9BEC8A8320D04A810054E1CF /* model */,
+				9BEC8A8220D04A750054E1CF /* view */,
+				9BEC8A8120D04A6C0054E1CF /* controller */,
+			);
+			path = PlaceMark;
+			sourceTree = "<group>";
+		};
 		9BEC89B720D0455E0054E1CF = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +251,7 @@
 		9BEC89D520D0460F0054E1CF /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				9B8997E320D1116E0055DFB9 /* Cell */,
 				9BEC89D620D046100054E1CF /* DTO */,
 				9BEC89E820D046100054E1CF /* Constants */,
 				9BEC89F020D046100054E1CF /* Extensions */,
@@ -211,6 +326,7 @@
 		9BEC8A1E20D046100054E1CF /* Custom component */ = {
 			isa = PBXGroup;
 			children = (
+				9B8997DE20D10BA30055DFB9 /* PlacemarkView */,
 			);
 			path = "Custom component";
 			sourceTree = "<group>";
@@ -235,9 +351,8 @@
 		9BEC8A8020D04A610054E1CF /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				9BEC8A8320D04A810054E1CF /* model */,
-				9BEC8A8220D04A750054E1CF /* view */,
-				9BEC8A8120D04A6C0054E1CF /* controller */,
+				9B8997D420D101690055DFB9 /* root */,
+				9B8997ED20D11C290055DFB9 /* PlaceMark */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -327,9 +442,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BEC89CE20D045600054E1CF /* LaunchScreen.storyboard in Resources */,
+				9B8997E020D10BEA0055DFB9 /* PlacemarkView.xib in Resources */,
 				9BEC89CB20D045600054E1CF /* Assets.xcassets in Resources */,
 				9BEC89C920D0455E0054E1CF /* Main.storyboard in Resources */,
 				9BEC8A8520D04AAE0054E1CF /* Location.storyboard in Resources */,
+				9B8997EB20D114030055DFB9 /* PlacemarksCell.xib in Resources */,
+				9B8997D820D101990055DFB9 /* Root.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,15 +513,18 @@
 				9BEC8A4520D046100054E1CF /* Constants.swift in Sources */,
 				9BEC8A6820D046100054E1CF /* LastRequest.swift in Sources */,
 				9BEC8A7C20D048FE0054E1CF /* LocationModel.swift in Sources */,
+				9B8997DA20D102A20055DFB9 /* RootVC.swift in Sources */,
 				9BEC8A5920D046100054E1CF /* UIViewExtensions.swift in Sources */,
 				9BEC8A4B20D046100054E1CF /* UIButtonExtension.swift in Sources */,
 				9BEC8A5B20D046100054E1CF /* AlertViewControllerExtension.swift in Sources */,
 				9BEC8A5720D046100054E1CF /* ColorExtension.swift in Sources */,
 				9BEC8A5C20D046100054E1CF /* UIImageExtension.swift in Sources */,
+				9B8997E820D111FF0055DFB9 /* PlacemarksCell.swift in Sources */,
 				9BEC8A7520D046100054E1CF /* BaseViewController.swift in Sources */,
 				9BEC8A7620D046100054E1CF /* BaseModel.swift in Sources */,
 				9BEC8A8720D04EB90054E1CF /* LocationsModel.swift in Sources */,
 				9BEC89C420D0455E0054E1CF /* AppDelegate.swift in Sources */,
+				9B8997E220D10C310055DFB9 /* PlacemarkView.swift in Sources */,
 				9BEC8A7E20D049280054E1CF /* coordinatesModel.swift in Sources */,
 				9BEC8A4E20D046100054E1CF /* StringExtensoin.swift in Sources */,
 			);
@@ -559,7 +680,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.m-tribes.com.M-TribesTest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -577,7 +698,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.m-tribes.com.M-TribesTest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

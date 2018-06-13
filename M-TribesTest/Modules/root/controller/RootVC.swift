@@ -8,28 +8,50 @@
 
 import UIKit
 
-class RootVC: UITabBarController {
+final class RootVC: UITabBarController {
+    
+    // MARK: - variables
+    var locationObj : LocationsModel = LocationsModel()
+
+    
+    
+    // MARK: - lifeCyle
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setDataToChildVC()
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabBarData()
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // MARK: - helping methods
+    
+    func tabBarData() {
+        
+        tabBar.items![0].title = "Locations"
+        tabBar.items![0].image = #imageLiteral(resourceName: "data")
+        tabBar.items![0].badgeValue = "\(locationObj.placemarks.count)"
+        
+        
     }
-    */
+    
+    func setDataToChildVC() {
+        
+        if let locationNC = self.viewControllers?.first as? UINavigationController {
+            if let locationVC = locationNC.viewControllers.first as? LocationsTableView {
+                locationVC.locationObj = locationObj
+            }
+        }
+        
+        
+    }
+
 
 }
