@@ -12,5 +12,5 @@ target 'M-TribesTest' do
 pod 'ObjectMapper'
 pod 'PKHUD'
 
-
+pod 'Cluster'
 end

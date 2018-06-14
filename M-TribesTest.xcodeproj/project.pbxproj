@@ -14,6 +14,10 @@
 		9B8997E220D10C310055DFB9 /* PlacemarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8997E120D10C310055DFB9 /* PlacemarkView.swift */; };
 		9B8997E820D111FF0055DFB9 /* PlacemarksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8997E620D111FF0055DFB9 /* PlacemarksCell.swift */; };
 		9B8997EB20D114030055DFB9 /* PlacemarksCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B8997EA20D114030055DFB9 /* PlacemarksCell.xib */; };
+		9B8997F320D120660055DFB9 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B8997F220D120660055DFB9 /* Map.storyboard */; };
+		9B8997F520D120C90055DFB9 /* LocationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8997F420D120C90055DFB9 /* LocationsVC.swift */; };
+		9B8997F720D128800055DFB9 /* LocationAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8997F620D128800055DFB9 /* LocationAnnotation.swift */; };
+		9B8997F920D136200055DFB9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B8997F820D136200055DFB9 /* MapKit.framework */; };
 		9BEC89C420D0455E0054E1CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEC89C320D0455E0054E1CF /* AppDelegate.swift */; };
 		9BEC89C620D0455E0054E1CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEC89C520D0455E0054E1CF /* ViewController.swift */; };
 		9BEC89C920D0455E0054E1CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BEC89C720D0455E0054E1CF /* Main.storyboard */; };
@@ -36,7 +40,7 @@
 		9BEC8A6920D046100054E1CF /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEC8A1D20D046100054E1CF /* ErrorHandler.swift */; };
 		9BEC8A7520D046100054E1CF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEC8A3920D046100054E1CF /* BaseViewController.swift */; };
 		9BEC8A7620D046100054E1CF /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEC8A3A20D046100054E1CF /* BaseModel.swift */; };
-		9BEC8A7A20D047960054E1CF /* LocationsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEC8A7920D047960054E1CF /* LocationsTableView.swift */; };
+		9BEC8A7A20D047960054E1CF /* PlaceMarksTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEC8A7920D047960054E1CF /* PlaceMarksTableView.swift */; };
 		9BEC8A7C20D048FE0054E1CF /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEC8A7B20D048FE0054E1CF /* LocationModel.swift */; };
 		9BEC8A7E20D049280054E1CF /* coordinatesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEC8A7D20D049280054E1CF /* coordinatesModel.swift */; };
 		9BEC8A8520D04AAE0054E1CF /* Location.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BEC8A8420D04AAE0054E1CF /* Location.storyboard */; };
@@ -53,6 +57,10 @@
 		9B8997E120D10C310055DFB9 /* PlacemarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacemarkView.swift; sourceTree = "<group>"; };
 		9B8997E620D111FF0055DFB9 /* PlacemarksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacemarksCell.swift; sourceTree = "<group>"; };
 		9B8997EA20D114030055DFB9 /* PlacemarksCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlacemarksCell.xib; sourceTree = "<group>"; };
+		9B8997F220D120660055DFB9 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
+		9B8997F420D120C90055DFB9 /* LocationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsVC.swift; sourceTree = "<group>"; };
+		9B8997F620D128800055DFB9 /* LocationAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAnnotation.swift; sourceTree = "<group>"; };
+		9B8997F820D136200055DFB9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		9BEC89C020D0455E0054E1CF /* M-TribesTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "M-TribesTest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BEC89C320D0455E0054E1CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BEC89C520D0455E0054E1CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,7 +85,7 @@
 		9BEC8A1D20D046100054E1CF /* ErrorHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		9BEC8A3920D046100054E1CF /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		9BEC8A3A20D046100054E1CF /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
-		9BEC8A7920D047960054E1CF /* LocationsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsTableView.swift; sourceTree = "<group>"; };
+		9BEC8A7920D047960054E1CF /* PlaceMarksTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMarksTableView.swift; sourceTree = "<group>"; };
 		9BEC8A7B20D048FE0054E1CF /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		9BEC8A7D20D049280054E1CF /* coordinatesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coordinatesModel.swift; sourceTree = "<group>"; };
 		9BEC8A8420D04AAE0054E1CF /* Location.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Location.storyboard; sourceTree = "<group>"; };
@@ -89,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B8997F920D136200055DFB9 /* MapKit.framework in Frameworks */,
 				55D1053AD400B6EEAE586290 /* Pods_M_TribesTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,6 +117,7 @@
 		775CE48CBF82421A31789DF9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9B8997F820D136200055DFB9 /* MapKit.framework */,
 				24F0A81B31D85236991BE212 /* Pods_M_TribesTest.framework */,
 			);
 			name = Frameworks;
@@ -213,6 +223,40 @@
 				9BEC8A8120D04A6C0054E1CF /* controller */,
 			);
 			path = PlaceMark;
+			sourceTree = "<group>";
+		};
+		9B8997EE20D1202F0055DFB9 /* map */ = {
+			isa = PBXGroup;
+			children = (
+				9B8997F120D1204B0055DFB9 /* model */,
+				9B8997F020D120450055DFB9 /* view */,
+				9B8997EF20D1203D0055DFB9 /* contoller */,
+			);
+			path = map;
+			sourceTree = "<group>";
+		};
+		9B8997EF20D1203D0055DFB9 /* contoller */ = {
+			isa = PBXGroup;
+			children = (
+				9B8997F420D120C90055DFB9 /* LocationsVC.swift */,
+			);
+			path = contoller;
+			sourceTree = "<group>";
+		};
+		9B8997F020D120450055DFB9 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				9B8997F220D120660055DFB9 /* Map.storyboard */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		9B8997F120D1204B0055DFB9 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				9B8997F620D128800055DFB9 /* LocationAnnotation.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		9BEC89B720D0455E0054E1CF = {
@@ -351,6 +395,7 @@
 		9BEC8A8020D04A610054E1CF /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				9B8997EE20D1202F0055DFB9 /* map */,
 				9B8997D420D101690055DFB9 /* root */,
 				9B8997ED20D11C290055DFB9 /* PlaceMark */,
 			);
@@ -360,7 +405,7 @@
 		9BEC8A8120D04A6C0054E1CF /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				9BEC8A7920D047960054E1CF /* LocationsTableView.swift */,
+				9BEC8A7920D047960054E1CF /* PlaceMarksTableView.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -415,6 +460,11 @@
 				TargetAttributes = {
 					9BEC89BF20D0455E0054E1CF = {
 						CreatedOnToolsVersion = 9.4;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -444,6 +494,7 @@
 				9BEC89CE20D045600054E1CF /* LaunchScreen.storyboard in Resources */,
 				9B8997E020D10BEA0055DFB9 /* PlacemarkView.xib in Resources */,
 				9BEC89CB20D045600054E1CF /* Assets.xcassets in Resources */,
+				9B8997F320D120660055DFB9 /* Map.storyboard in Resources */,
 				9BEC89C920D0455E0054E1CF /* Main.storyboard in Resources */,
 				9BEC8A8520D04AAE0054E1CF /* Location.storyboard in Resources */,
 				9B8997EB20D114030055DFB9 /* PlacemarksCell.xib in Resources */,
@@ -480,12 +531,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-M-TribesTest/Pods-M-TribesTest-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Cluster/Cluster.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cluster.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 			);
@@ -509,14 +562,16 @@
 				9BEC8A6920D046100054E1CF /* ErrorHandler.swift in Sources */,
 				9BEC8A6720D046100054E1CF /* RequestConfiguraton.swift in Sources */,
 				9BEC8A4620D046100054E1CF /* StoryBoardConstants.swift in Sources */,
-				9BEC8A7A20D047960054E1CF /* LocationsTableView.swift in Sources */,
+				9BEC8A7A20D047960054E1CF /* PlaceMarksTableView.swift in Sources */,
 				9BEC8A4520D046100054E1CF /* Constants.swift in Sources */,
 				9BEC8A6820D046100054E1CF /* LastRequest.swift in Sources */,
+				9B8997F720D128800055DFB9 /* LocationAnnotation.swift in Sources */,
 				9BEC8A7C20D048FE0054E1CF /* LocationModel.swift in Sources */,
 				9B8997DA20D102A20055DFB9 /* RootVC.swift in Sources */,
 				9BEC8A5920D046100054E1CF /* UIViewExtensions.swift in Sources */,
 				9BEC8A4B20D046100054E1CF /* UIButtonExtension.swift in Sources */,
 				9BEC8A5B20D046100054E1CF /* AlertViewControllerExtension.swift in Sources */,
+				9B8997F520D120C90055DFB9 /* LocationsVC.swift in Sources */,
 				9BEC8A5720D046100054E1CF /* ColorExtension.swift in Sources */,
 				9BEC8A5C20D046100054E1CF /* UIImageExtension.swift in Sources */,
 				9B8997E820D111FF0055DFB9 /* PlacemarksCell.swift in Sources */,
@@ -671,7 +726,8 @@
 			baseConfigurationReference = 7CFF4B7635487AEF0D4AC045 /* Pods-M-TribesTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = ZDYJEYM9VD;
 				INFOPLIST_FILE = "M-TribesTest/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -679,6 +735,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.m-tribes.com.M-TribesTest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "bbc2488b-1de0-4b95-b8cd-6816f8bc42c5";
+				PROVISIONING_PROFILE_SPECIFIER = tribsDevPov;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -689,7 +747,8 @@
 			baseConfigurationReference = 2D10BE49393DF8984E5A044D /* Pods-M-TribesTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "M-TribesTest/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -697,6 +756,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.m-tribes.com.M-TribesTest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

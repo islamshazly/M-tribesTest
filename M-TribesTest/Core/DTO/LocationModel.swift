@@ -9,7 +9,6 @@
 import UIKit
 import ObjectMapper
 
-
 final class LocationModel: BaseModel {
     
     // Base Model is case we have common retuns form back end
@@ -22,6 +21,22 @@ final class LocationModel: BaseModel {
     var name: String = ""
     var vin: String = ""
     var coordinates = [Double]()
+    
+    
+    // not from model
+    
+    var lat: Double {
+        get {
+            return coordinates[1]
+        }
+    }
+    
+    var long: Double {
+        get {
+            return coordinates[0]
+        }
+    }
+
     
     override func mapping(map: Map) {
         super.mapping(map: map)

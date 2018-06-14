@@ -12,14 +12,14 @@ final class RootVC: UITabBarController {
     
     // MARK: - variables
     var locationObj : LocationsModel = LocationsModel()
-
+    
     
     
     // MARK: - lifeCyle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         setDataToChildVC()
         
@@ -30,28 +30,33 @@ final class RootVC: UITabBarController {
         tabBarData()
     }
     
-
+    
     // MARK: - helping methods
     
     func tabBarData() {
         
-        tabBar.items![0].title = "Locations"
+        tabBar.items![0].title = "Place Marks"
         tabBar.items![0].image = #imageLiteral(resourceName: "data")
         tabBar.items![0].badgeValue = "\(locationObj.placemarks.count)"
+        
+        tabBar.items![1].title = "Locations"
+        tabBar.items![1].image = #imageLiteral(resourceName: "location")
         
         
     }
     
     func setDataToChildVC() {
         
-        if let locationNC = self.viewControllers?.first as? UINavigationController {
-            if let locationVC = locationNC.viewControllers.first as? LocationsTableView {
-                locationVC.locationObj = locationObj
-            }
+        if let placeMarksVC = self.viewControllers?.first as? PlaceMarksTableView {
+            placeMarksVC.locationObj = locationObj
         }
         
+        if let locationVC = self.viewControllers![1] as? LocationsVC {
+            
+            locationVC.locationObj = locationObj
+        }
         
     }
-
-
+    
+    
 }

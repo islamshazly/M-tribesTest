@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class LocationsTableView: BaseViewController {
+final class PlaceMarksTableView: BaseViewController {
     
     //MARK:- variables
     
@@ -34,7 +34,7 @@ final class LocationsTableView: BaseViewController {
 }
 
 
-extension LocationsTableView : UITableViewDataSource {
+extension PlaceMarksTableView : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return locationObj.placemarks.count
