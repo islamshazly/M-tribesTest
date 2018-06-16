@@ -52,7 +52,7 @@ final class PlacemarkView: UIView {
         
     }
     
-    func configure(_ loaction :  LocationModel) {
+    func configure(_ loaction :  MarkModel) {
         
         name.text = loaction.name
         engineType.text = loaction.engineType

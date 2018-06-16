@@ -23,7 +23,7 @@ final class PlacemarksCell: UITableViewCell {
     }
     
     
-    func configure(_ location : LocationModel) {
+    func configure(_ location : MarkModel) {
         
         // make PlacemarkView cutom view if we need it in other place
         // and show that i can devlop custom view 

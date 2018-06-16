@@ -12,7 +12,7 @@ final class PlaceMarksTableView: BaseViewController {
     
     //MARK:- variables
     
-    var locationObj : LocationsModel = LocationsModel()
+    var placeMarksObj : PlaceMarkersModel = PlaceMarkersModel()
     
     //MARK- outlets
     
@@ -37,13 +37,13 @@ final class PlaceMarksTableView: BaseViewController {
 extension PlaceMarksTableView : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return locationObj.placemarks.count
+        return placeMarksObj.placemarks.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let placemarksCell = tableView.dequeueReusableCell(withIdentifier: "PlacemarksCell", for: indexPath) as? PlacemarksCell {
             
-            let location = locationObj.placemarks[indexPath.row]
+            let location = placeMarksObj.placemarks[indexPath.row]
             placemarksCell.configure(location)
             return placemarksCell
         }

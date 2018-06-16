@@ -12,7 +12,7 @@ final class ViewController: BaseViewController {
     
     //MARK:- variables
     
-    private var locationObj : LocationsModel = LocationsModel()
+    private var placeMarksObj : PlaceMarkersModel = PlaceMarkersModel()
 
     //MARK- life Cycle
     
@@ -38,13 +38,13 @@ final class ViewController: BaseViewController {
         // adding delegate to perform general actions after api call back
         // EX: hide Loading indicator , or show general error .
         
-        locationObj = LocationsModel(delegate: self)
+        placeMarksObj = PlaceMarkersModel(delegate: self)
         
-        locationObj.requestTopUsers(WithCallBack: { [weak self](model) in
-            if let obj = model as? LocationsModel {
-                self?.locationObj.placemarks = obj.placemarks
+        placeMarksObj.requestTopUsers(WithCallBack: { [weak self](model) in
+            if let obj = model as? PlaceMarkersModel {
+                self?.placeMarksObj.placemarks = obj.placemarks
                 if let rootVC = UIViewController.viewController(withStoryBoardname: RootSB.name) as? RootVC{
-                    rootVC.locationObj = self?.locationObj ?? LocationsModel()
+                    rootVC.placeMarksObj = self?.placeMarksObj ?? PlaceMarkersModel()
                     appDelegate?.window?.rootViewController = rootVC
                 }
                 

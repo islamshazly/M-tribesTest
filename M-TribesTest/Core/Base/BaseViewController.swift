@@ -11,7 +11,7 @@ import PKHUD
 
 
 
-protocol BaseProtocol  {
+protocol BaseLoadingProtocol  {
     
     func showLoadingIndicator()
     func showSuccessIndicator()
@@ -24,11 +24,15 @@ protocol BaseProtocol  {
     
 }
 
+protocol LocationProtocol {
+    func getUserLocation(delegate : CLLocationManagerDelegate)
+}
 
 
 class BaseViewController: UIViewController , ServiceDelegate {
     
     //MARK: variables
+    fileprivate var locationManager: CLLocationManager!
     
     //MARK: outlets
     
@@ -50,7 +54,10 @@ class BaseViewController: UIViewController , ServiceDelegate {
     }
     
     deinit {
-        
+       if  locationManager != nil {
+            
+            locationManager.delegate = nil
+        }
         
     }
     
@@ -94,7 +101,7 @@ class BaseViewController: UIViewController , ServiceDelegate {
     
 }
 
-extension BaseViewController : BaseProtocol {
+extension BaseViewController : BaseLoadingProtocol {
     func showLoadingInView(_ view: UIView) {
         HUD.show(.progress, onView: view)
         
@@ -137,5 +144,38 @@ extension BaseViewController : BaseProtocol {
         }
         
     }
+    
+}
+
+extension BaseViewController : LocationProtocol {
+    func getUserLocation(delegate : CLLocationManagerDelegate) {
+        if (CLLocationManager.locationServicesEnabled()) {
+            if locationManager == nil {
+                locationManager = CLLocationManager()
+            }
+            locationManager?.requestWhenInUseAuthorization()
+            locationManager.delegate = delegate
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.requestAlwaysAuthorization()
+            locationManager.startUpdatingLocation()
+            
+        }
+    }
+}
+
+extension BaseViewController : CLLocationManagerDelegate{
+    
+
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        
+        switch status {
+        case .authorizedAlways ,.authorizedWhenInUse:
+            break
+        default:
+            UIAlertController.ShowAlert(VC: self, message: "Please go into Settings and give this app authorization to your location.", action: nil)
+        }
+    }
+    
     
 }

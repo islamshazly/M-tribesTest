@@ -11,17 +11,17 @@ import UIKit
 
 
 
+
+
 let appDelegate = UIApplication.shared.delegate as? AppDelegate
-let screenWidth = UIScreen.main.bounds.width
-let screenHeight = UIScreen.main.bounds.height
-
-
 
 
 struct Constants {
     
+    static let screenWidth = UIScreen.main.bounds.width
+    static let screenHeight = UIScreen.main.bounds.height
     static let baseURL : String = "http://data.m-tribes.com/"
-    
     static let Locations : String = "locations"
+    static let googleAPIKey: String = "AIzaSyAEh-Yeb3cJWVlDSs42eCQiMuZCqYYpiBg"
     
 }
