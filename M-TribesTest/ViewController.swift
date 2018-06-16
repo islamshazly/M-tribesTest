@@ -54,9 +54,7 @@ final class ViewController: BaseViewController {
             // Already we handled error in base
             // here if you want make some actions in error OR override DidFail method In BaseViewController
             
-        }
-        
-        
+        }   
     }
     
 }

@@ -86,13 +86,6 @@ extension UIView {
         }
     }
     
-    public func circulerContentWithTredBorder() {
-        layer.masksToBounds = true
-        self.clipsToBounds = true
-        self.cornerRadius = self.bounds.height / 2
-        self.borderColor = UIColor.oOrange
-        self.borderWidth = 1.5
-    }
     
   
   enum Shape {

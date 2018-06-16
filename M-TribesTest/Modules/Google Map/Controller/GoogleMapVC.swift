@@ -10,8 +10,8 @@ import UIKit
 import GoogleMaps
 
 let kClusterItemCount = 10000
-let kCameraLatitude = -33.8
-let kCameraLongitude = 151.2
+let kCameraLatitude = 53.55
+let kCameraLongitude = 9.9937
 
 
 final class GoogleMapVC: BaseViewController {
@@ -71,11 +71,30 @@ final class GoogleMapVC: BaseViewController {
     
     override func loadView() {
         let camera = GMSCameraPosition.camera(withLatitude: kCameraLatitude,
-                                              longitude: kCameraLongitude, zoom: 10)
+                                              longitude: kCameraLongitude, zoom: 15)
+        
         mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         self.view = mapView
     }
     
+    
+}
+
+
+extension GoogleMapVC {
+    
+    // the location delegate is already assigied
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        let location = locations.last
+        let camera = GMSCameraPosition.camera(withLatitude: (location?.coordinate.latitude)!,
+                                              longitude: (location?.coordinate.longitude)!,
+                                             zoom: 15)
+
+        mapView.animate(to: camera)
+
+    }
     
 }
 
@@ -97,8 +116,6 @@ extension GoogleMapVC : GMUClusterManagerDelegate {
 extension GoogleMapVC : GMSMapViewDelegate {
     
     // MARK: - GMUMapViewDelegate
-    
-    
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         
@@ -157,8 +174,6 @@ extension GoogleMapVC : GMSMapViewDelegate {
         }
         
     }
-    
-
 }
 
 extension GoogleMapVC : GMUClusterRendererDelegate {

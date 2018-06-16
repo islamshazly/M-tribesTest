@@ -53,7 +53,6 @@
 		9BEC8A4520D046100054E1CF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEC89E920D046100054E1CF /* Constants.swift */; };
 		9BEC8A4620D046100054E1CF /* StoryBoardConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEC89EA20D046100054E1CF /* StoryBoardConstants.swift */; };
 		9BEC8A4B20D046100054E1CF /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEC89F120D046100054E1CF /* UIButtonExtension.swift */; };
-		9BEC8A4C20D046100054E1CF /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEC89F220D046100054E1CF /* NSObjectExtension.swift */; };
 		9BEC8A4E20D046100054E1CF /* StringExtensoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEC89F420D046100054E1CF /* StringExtensoin.swift */; };
 		9BEC8A5220D046100054E1CF /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEC89F820D046100054E1CF /* UIApplicationExtension.swift */; };
 		9BEC8A5420D046100054E1CF /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEC89FA20D046100054E1CF /* UIViewControllerExtension.swift */; };
@@ -69,7 +68,6 @@
 		9BEC8A7620D046100054E1CF /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEC8A3A20D046100054E1CF /* BaseModel.swift */; };
 		9BEC8A7A20D047960054E1CF /* PlaceMarksTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEC8A7920D047960054E1CF /* PlaceMarksTableView.swift */; };
 		9BEC8A7C20D048FE0054E1CF /* MarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEC8A7B20D048FE0054E1CF /* MarkModel.swift */; };
-		9BEC8A7E20D049280054E1CF /* coordinatesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEC8A7D20D049280054E1CF /* coordinatesModel.swift */; };
 		9BEC8A8520D04AAE0054E1CF /* Location.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BEC8A8420D04AAE0054E1CF /* Location.storyboard */; };
 		9BEC8A8720D04EB90054E1CF /* PlaceMarkersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEC8A8620D04EB90054E1CF /* PlaceMarkersModel.swift */; };
 /* End PBXBuildFile section */
@@ -166,7 +164,6 @@
 		9BEC89E920D046100054E1CF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9BEC89EA20D046100054E1CF /* StoryBoardConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryBoardConstants.swift; sourceTree = "<group>"; };
 		9BEC89F120D046100054E1CF /* UIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
-		9BEC89F220D046100054E1CF /* NSObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 		9BEC89F420D046100054E1CF /* StringExtensoin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensoin.swift; sourceTree = "<group>"; };
 		9BEC89F820D046100054E1CF /* UIApplicationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		9BEC89FA20D046100054E1CF /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
@@ -182,7 +179,6 @@
 		9BEC8A3A20D046100054E1CF /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		9BEC8A7920D047960054E1CF /* PlaceMarksTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMarksTableView.swift; sourceTree = "<group>"; };
 		9BEC8A7B20D048FE0054E1CF /* MarkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkModel.swift; sourceTree = "<group>"; };
-		9BEC8A7D20D049280054E1CF /* coordinatesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coordinatesModel.swift; sourceTree = "<group>"; };
 		9BEC8A8420D04AAE0054E1CF /* Location.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Location.storyboard; sourceTree = "<group>"; };
 		9BEC8A8620D04EB90054E1CF /* PlaceMarkersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMarkersModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -570,7 +566,6 @@
 			isa = PBXGroup;
 			children = (
 				9BEC8A7B20D048FE0054E1CF /* MarkModel.swift */,
-				9BEC8A7D20D049280054E1CF /* coordinatesModel.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -588,7 +583,6 @@
 			isa = PBXGroup;
 			children = (
 				9BEC89F120D046100054E1CF /* UIButtonExtension.swift */,
-				9BEC89F220D046100054E1CF /* NSObjectExtension.swift */,
 				9BEC89F420D046100054E1CF /* StringExtensoin.swift */,
 				9BEC89F820D046100054E1CF /* UIApplicationExtension.swift */,
 				9BEC89FA20D046100054E1CF /* UIViewControllerExtension.swift */,
@@ -777,12 +771,10 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-M-TribesTest/Pods-M-TribesTest-resources.sh",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
-				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -842,7 +834,6 @@
 				9BEC89C620D0455E0054E1CF /* ViewController.swift in Sources */,
 				9B02026220D468ED00B38FB7 /* GMUGradient.m in Sources */,
 				9B02024F20D468ED00B38FB7 /* GMUPlacemark.m in Sources */,
-				9BEC8A4C20D046100054E1CF /* NSObjectExtension.swift in Sources */,
 				9B25A1FF20D4BA86007501D2 /* GMUDefaultClusterRenderer.m in Sources */,
 				9B02026820D477E700B38FB7 /* GooglePOIITem.swift in Sources */,
 				9BEC8A5420D046100054E1CF /* UIViewControllerExtension.swift in Sources */,
@@ -889,7 +880,6 @@
 				9BEC89C420D0455E0054E1CF /* AppDelegate.swift in Sources */,
 				9B8997E220D10C310055DFB9 /* PlacemarkView.swift in Sources */,
 				9B25A1FA20D4BA86007501D2 /* GMUClusterManager.m in Sources */,
-				9BEC8A7E20D049280054E1CF /* coordinatesModel.swift in Sources */,
 				9B25A20020D4BA86007501D2 /* GMUDefaultClusterIconGenerator.m in Sources */,
 				9BEC8A4E20D046100054E1CF /* StringExtensoin.swift in Sources */,
 			);

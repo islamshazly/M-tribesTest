@@ -50,7 +50,7 @@ final class MapKitVC: BaseViewController {
         manager.add(marksAnnotations)
         
         mapView.showsUserLocation = true
-
+        
     }
     
     
@@ -62,12 +62,10 @@ extension MapKitVC {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        //        let location = locations.last
-        //        let center = CLLocationCoordinate2D(latitude: location!.coordinate.latitude, longitude: location!.coordinate.longitude)
-        //        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
-        //        //        self.mapView.setRegion(region, animated: true)
-        //
-        //        mapView.showsUserLocation = true
+        let location = locations.last
+        let center = CLLocationCoordinate2D(latitude: location!.coordinate.latitude, longitude: location!.coordinate.longitude)
+        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+        self.mapView.setRegion(region, animated: true)
     }
     
 }
@@ -163,12 +161,12 @@ extension MapKitVC : MKMapViewDelegate {
             isPinTaped = true
             tappedAnnotation = view
             annotationsView.forEach {
-                   
-                    if $0 != view {
-                        $0.alpha = 0
-                    } else {
-                        $0.alpha = 1
-                    }
+                
+                if $0 != view {
+                    $0.alpha = 0
+                } else {
+                    $0.alpha = 1
+                }
             }
         }
     }
@@ -176,15 +174,15 @@ extension MapKitVC : MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
         
         guard let annotation = view.annotation else { return }
-
+        
         if let  _ = annotation as? LocationAnnotation {
             isPinTaped = false
             annotationsView.forEach {
-                        $0.alpha = 1
-                }
+                $0.alpha = 1
             }
         }
-        
+    }
+    
     
     func mapView(_ mapView: MKMapView, didAdd views: [MKAnnotationView]) {
         annotationsView.append(contentsOf: views)

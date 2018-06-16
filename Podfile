@@ -13,7 +13,6 @@ pod 'PKHUD'
 pod 'Cluster'
 pod 'GoogleMaps'
 
-pod 'GooglePlaces'
 #pod 'Google-Maps-iOS-Utils'
 
 
