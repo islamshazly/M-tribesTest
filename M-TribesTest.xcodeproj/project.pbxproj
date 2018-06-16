@@ -647,9 +647,9 @@
 		9BEC8A8020D04A610054E1CF /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				9B8997D420D101690055DFB9 /* Root */,
 				9B8B629D20D45DC800254CD2 /* Google Map */,
 				9B8997EE20D1202F0055DFB9 /* Mapkit */,
-				9B8997D420D101690055DFB9 /* Root */,
 				9B8997ED20D11C290055DFB9 /* PlaceMark */,
 			);
 			path = Modules;
