@@ -172,8 +172,10 @@ extension BaseViewController : CLLocationManagerDelegate{
         switch status {
         case .authorizedAlways ,.authorizedWhenInUse:
             break
+        case .denied  , .restricted:
+                UIAlertController.ShowAlert(VC: self, message: "Please go into Settings and give this app authorization to your location.", action: nil)
         default:
-            UIAlertController.ShowAlert(VC: self, message: "Please go into Settings and give this app authorization to your location.", action: nil)
+            print("location per")
         }
     }
     
