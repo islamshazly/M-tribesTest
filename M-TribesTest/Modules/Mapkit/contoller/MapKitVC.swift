@@ -56,19 +56,6 @@ final class MapKitVC: BaseViewController {
     
 }
 
-extension MapKitVC {
-    
-    // the location delegate is already assigied
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
-        let location = locations.last
-        let center = CLLocationCoordinate2D(latitude: location!.coordinate.latitude, longitude: location!.coordinate.longitude)
-        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
-        self.mapView.setRegion(region, animated: true)
-    }
-    
-}
 
 extension MapKitVC : MKMapViewDelegate {
     
