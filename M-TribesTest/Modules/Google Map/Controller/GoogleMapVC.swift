@@ -24,7 +24,6 @@ final class GoogleMapVC: BaseViewController {
     fileprivate var clusterManager: GMUClusterManager!
     fileprivate var markers:[GMSMarker] = [GMSMarker]()
     fileprivate var tappedMarker:GMSMarker = GMSMarker()
-
     fileprivate var isMarkerTaped : Bool = false
 
     
@@ -61,7 +60,6 @@ final class GoogleMapVC: BaseViewController {
         // user location
         mapView.isMyLocationEnabled = true
         mapView.accessibilityElementsHidden = false
-
         
     }
     
@@ -72,7 +70,6 @@ final class GoogleMapVC: BaseViewController {
     override func loadView() {
         let camera = GMSCameraPosition.camera(withLatitude: kCameraLatitude,
                                               longitude: kCameraLongitude, zoom: 15)
-        
         mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         self.view = mapView
     }
@@ -103,18 +100,15 @@ extension GoogleMapVC : GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         
         // did change cammer position delegate is called after the marker taped
-        
         tappedMarker = marker
         isMarkerTaped = true
         hideMarkersExceptTapedMarker()
-        
         return false
     }
     
     func mapView(_ mapView: GMSMapView, didCloseInfoWindowOf marker: GMSMarker) {
         
         if isMarkerTaped {
-            
             isMarkerTaped = false
             showAllMarkers()
         }
@@ -123,7 +117,6 @@ extension GoogleMapVC : GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
         
         if isMarkerTaped {
-            
             isMarkerTaped = false
             showAllMarkers()
         }
@@ -140,8 +133,8 @@ extension GoogleMapVC : GMSMapViewDelegate {
     //MARK: - show and hide markers
     
     func showAllMarkers() {
+        
         markers.forEach {
-            
             $0.opacity = 1
         }
     }
@@ -167,7 +160,6 @@ extension GoogleMapVC : GMUClusterRendererDelegate {
         if let poiItem = marker.userData as? GooglePOIITem {
             marker.title = poiItem.title
             marker.snippet = poiItem.snippet
-
         }
     }
     

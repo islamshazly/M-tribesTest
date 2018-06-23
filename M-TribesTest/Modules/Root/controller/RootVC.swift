@@ -22,16 +22,13 @@ final class RootVC: UITabBarController {
         
         // Do any additional setup after loading the view.
         setDataToChildVC()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        
         tabBar.barTintColor = .black
         tabBar.tintColor = .white
-        
         tabBarData()
     }
     
@@ -43,14 +40,10 @@ final class RootVC: UITabBarController {
         tabBar.items![0].title = "Place Marks"
         tabBar.items![0].image = #imageLiteral(resourceName: "data")
         tabBar.items![0].badgeValue = "\(placeMarksObj.placemarks.count)"
-        
         tabBar.items![1].title = "MapKit"
         tabBar.items![1].image = #imageLiteral(resourceName: "location")
-        
         tabBar.items![2].title = "GoogleMaps"
         tabBar.items![2].image = #imageLiteral(resourceName: "location-1")
-        
-        
     }
     
     func setDataToChildVC() {
@@ -58,17 +51,14 @@ final class RootVC: UITabBarController {
         if let placeMarksVC = self.viewControllers?.first as? PlaceMarksTableView {
             placeMarksVC.placeMarksObj = placeMarksObj
         }
-        
         if let locationVC = self.viewControllers![1] as? MapKitVC {
             
             locationVC.placeMarksObj = placeMarksObj
         }
-        
         if let googleVC = self.viewControllers![2] as? GoogleMapVC {
             
             googleVC.locationObj = placeMarksObj
         }
-        
     }
     
     

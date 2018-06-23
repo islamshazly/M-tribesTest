@@ -39,18 +39,13 @@ final class MapKitVC: BaseViewController {
         // use it form BaseViewController , i will use it again at GoogleMapVC
         getUserLocation(delegate: self)
         //        mapView.register(ClusterAnnotation.self, forAnnotationViewWithReuseIdentifier: "Cluster")
-        
         let marksAnnotations = placeMarksObj.generateAnnotations()
-        
         manager.cellSize = nil
         manager.maxZoomLevel = 17
         manager.minCountForClustering = 3
         manager.clusterPosition = .nearCenter
-        
         manager.add(marksAnnotations)
-        
         mapView.showsUserLocation = true
-        
     }
     
     
@@ -67,7 +62,6 @@ extension MapKitVC : MKMapViewDelegate {
             var view = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
             if let view = view as? ClusterAnnotationView {
                 view.annotation = annotation
-                
                 view.configure(with: style)
             } else {
                 view = ClusterAnnotationView(annotation: annotation, reuseIdentifier: identifier, style: .color(.red, radius: 25))
@@ -89,13 +83,10 @@ extension MapKitVC : MKMapViewDelegate {
                 view.canShowCallout = true
                 view.calloutOffset = CGPoint(x: -5, y: 5)
                 view.rightCalloutAccessoryView = UIButton(type: .infoDark)
-                
             }
             
             return view
         }
-        
-        
     }
     
     
@@ -109,10 +100,8 @@ extension MapKitVC : MKMapViewDelegate {
         // or we consider he didDeselect when he change the region , it's up to business.
         
         if isPinTaped == false {
-            
             manager.reload(mapView: mapView)
         } else {
-            
             annotationsView.forEach {
                 
                 if $0 != tappedAnnotation {
@@ -148,7 +137,6 @@ extension MapKitVC : MKMapViewDelegate {
             isPinTaped = true
             tappedAnnotation = view
             annotationsView.forEach {
-                
                 if $0 != view {
                     $0.alpha = 0
                 } else {
